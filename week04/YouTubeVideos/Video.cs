@@ -1,48 +1,48 @@
 using System.Collections.Generic;
 class Video 
 {
-    string title;
-    string author;
-    int lengthInSeconds;
-    List<Comment> comments;
+    string _title;
+    string _author;
+    int _lengthInSeconds;
+    List<Comment>_comments;
     
 
     public Video(string title, string author, int lengthInSeconds)
     {
-        this.title = title;
-        this.author = author;
-        this.lengthInSeconds = lengthInSeconds;
-        this.comments = new List<Comment>();
+        this._title = title;
+        this._author = author;
+        this._lengthInSeconds = lengthInSeconds;
+        this._comments = new List<Comment>();
     }
 
     public void AddComment(Comment comment)
     {
-        comments.Add(comment);
+        _comments.Add(comment);
     }
 
     public int GetCommentCount()
     {
-        return comments.Count;
+        return _comments.Count;
     }
 
      public string GetTitle()
     {
-        return title;
+        return _title;
     }
 
      public string GetAuthor()
     {
-        return author;
+        return _author;
     }
 
      public int GetLengthInSeconds()
     {
-        return lengthInSeconds;
+        return _lengthInSeconds;
     }
 
      public List<Comment> GetComments()
     {
-        return comments;
+        return _comments;
     }
 
 }
