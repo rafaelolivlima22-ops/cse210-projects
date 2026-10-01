@@ -3,13 +3,13 @@ using System;
 class Product
 {
     
-       string _name;
+       private string _name;
 
-       string _productId;
+       private string _productId;
 
-        decimal _price;
+        private decimal _price;
 
-        int _quantity;
+        private int _quantity;
 
         
        

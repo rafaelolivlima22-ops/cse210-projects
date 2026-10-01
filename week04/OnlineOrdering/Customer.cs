@@ -2,9 +2,9 @@ using System;
 
 class Customer
 {
-    string _name;
+    private string _name;
 
-     Address _address;
+    private Address _address;
 
     public Customer(string name, Address address)
     {

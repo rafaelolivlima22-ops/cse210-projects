@@ -3,13 +3,13 @@ using System;
 class Address
 
 {
-    string _streetAddress;
+    private string _streetAddress;
 
-    string _city;
+    private string _city;
 
-    string _state;
+    private string _state;
 
-    string _country;
+    private string _country;
 
     public Address(string streetAddress, string city, string state, string country)
     {
