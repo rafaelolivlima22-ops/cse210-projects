@@ -3,13 +3,13 @@ using System;
 class Product
 {
     
-       string name;
+       string _name;
 
-       string productId;
+       string _productId;
 
-        decimal price;
+        decimal _price;
 
-        int quantity;
+        int _quantity;
 
         
        
@@ -17,33 +17,26 @@ class Product
       decimal price, int quantity)
 
     {
-        this.name = name;
-        this.productId = productId;
-        this.price = price;
-        this.quantity = quantity;
+        this._name = name;
+        this._productId = productId;
+        this._price = price;
+        this._quantity = quantity;
     }      
 
     public decimal GetTotalCost()
     {
-        return price * quantity;
+        return _price * _quantity;
     }
 
     public string GetName()
     {
-        return name;
+        return _name;
     }
 
     public string GetProductId()
     {
-        return productId;
+        return _productId;
     }
-
-
-    
-  
-    
-    
-
 
 }
 

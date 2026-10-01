@@ -4,25 +4,25 @@ class Order
 
 {
     
-    List<Product> products;
-    Customer customer;
+    List<Product> _products;
+    Customer _customer;
 
     public Order(List<Product> products, Customer customer)
     {
-        this.products = products;
-        this.customer = customer;
+        this._products = products;
+        this._customer = customer;
     }
 
     public decimal GetTotalCost()
     {
         decimal totalCost = 0;
 
-        foreach (Product product in products)
+        foreach (Product product in _products)
         {
             totalCost += product.GetTotalCost();
         }
 
-        if (customer.IsInUSA())
+        if (_customer.IsInUSA())
         {
             totalCost = totalCost + 5;
 
@@ -40,7 +40,7 @@ class Order
     {
         string packingLabel = "";
 
-        foreach (Product product in products)
+        foreach (Product product in _products)
         {
             packingLabel += product.GetName() + " - " + product.GetProductId() + "\n";
         }
@@ -50,7 +50,7 @@ class Order
     public string GetShippingLabel()
 
     {
-       return customer.GetName() + "\n" + customer.GetFormatAddress();
+       return _customer.GetName() + "\n" + _customer.GetFormatAddress();
     }
 
 }

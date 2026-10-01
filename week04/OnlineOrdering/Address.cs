@@ -3,30 +3,30 @@ using System;
 class Address
 
 {
-    string streetAddress;
+    string _streetAddress;
 
-    string city;
+    string _city;
 
-    string state;
+    string _state;
 
-    string country;
+    string _country;
 
     public Address(string streetAddress, string city, string state, string country)
     {
-        this.streetAddress = streetAddress;
-        this.city = city;
-        this.state = state;
-        this.country = country;
+        this._streetAddress = streetAddress;
+        this._city = city;
+        this._state = state;
+        this._country = country;
     }
 
     public bool IsInUSA()
     {
-        return country == "USA";
+        return _country == "USA";
     }
 
     public string GetFullAddress()
     {
-        return $"{streetAddress}\n {city}, {state} \n{country}";
+        return $"{_streetAddress}\n {_city}, {_state} \n{_country}";
     
     }
 
